@@ -2,16 +2,18 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
+    <title>Страница формы HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page-body">
+
+  <body class="page-body form-body">
+
     <header class="page-header">
       <div class="page-header__wrapper container">
         <div class="page-header__logo-block logo-shop-header">
-          <a class="logo-shop-header__link-image" >
+          <a class="logo-shop-header__link-image" href="index.html">
             <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип-картинка магазина «Кэт энерджи»">
           </a>
-          <a class="logo-shop-header__link-text">
+          <a class="logo-shop-header__link-text" href="index.html">
             <img src="img/logo-text.svg" width="101" height="18" alt="Логотип-текст магазина «Кэт энерджи»">
           </a>
         </div>
@@ -21,7 +23,7 @@
           </button>
           <ul class="main-navigation__list site-list">
             <li class="site-list__item site-list__item--current">
-              <a>
+              <a href="index.html" >
                 главная
               </a>
             </li>
@@ -31,7 +33,7 @@
               </a>
             </li>
             <li class="site-list__item">
-              <a href="form.html" >
+              <a>
                 подбор программы
               </a>
             </li>
@@ -39,167 +41,136 @@
         </nav>
       </div>
     </header>
-    <main class="page-main">
-      <h1 class="visually-hidden">Магазин функционального питания "Кэт энерджи"</h1>
-      <section class="functional-food">
-        <div class="functional-food__text-block text-food">
-          <div class="text-food__wrapper container">
-            <h2 class="functional-food__title">
-              Функциональное  питание для котов
-            </h2>
-            <p class="functional-food__slogan">
-              Занялся собой? Займись котом!
-            </p>
-          </div>
-        </div>
-        <div class="functional-food__picture-block picture-food">
-          <div class="picture-food__wrapper container">
-            <img src="img/picture-food-index.png" width="280" height="270" alt="Товар магазина «Кэт энерджи»">
-          </div>
-        </div>
-        <div class="functional-food__link-block link-block-food">
-          <div class="link-block-food__wrapper container">
-            <a class="button functional-food__button" href="form.html">
-              подобрать программу
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="programs">
-        <div class="programs__wrapper container">
-          <h2 class="visually-hidden">
-            Программы питания
-          </h2>
-          <ul class = "programs__list">
-            <li class = "programs__item programs__item--slim">
-              <h3 class = "programs__title">
-                похудение
-              </h3>
-              <p class = "programs__description">
-                Ваш кот весит больше собаки и почти утратил способность лазить
-                по деревьям? Пора на диету! Cat Energy Slim поможет вашему
-                питомцу сбросить лишний вес.
-              </p>
-              <div class="programs__link-block">
-                <a href="#">
-                  каталог slim
-                </a>
+
+    <main class="page-main form-main container">
+
+      <h1 class="form-main__title">
+        Подбор программы
+      </h1>
+
+      <form class="form-main__form form" action="https://echo.htmlacademy.ru" method="post">
+
+        <fieldset class="form__cat-information cat-information">
+          <legend class = "cat-information__title">
+            Заполните анкету, и мы подберем
+            программу питания для вашего кота
+          </legend>
+          <ul class="cat-information__list">
+            <li class="cat-information__item item-cat">
+              <label class="item-cat__label" for="cat-name"> Имя:*</label>
+              <input class="item-cat__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required >
+            </li>
+            <li class="cat-information__item item-cat">
+              <label class="item-cat__label" for="cat-weight"> Вес (кг):*</label>
+              <input class="item-cat__input" id="cat-weight" type="text" name="cat-weight" placeholder="7" required>
+            </li>
+            <li class="cat-information__item item-cat">
+              <label class="item-cat__label" for="cat-age"> Возраст (лет):</label>
+              <input class="item-cat__input" id="cat-age" type="text" name="cat-age" placeholder="7">
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__change-program change-program">
+          <legend class = "visually-hidden">Выбор программы</legend>
+          <ul class="change-program__list">
+            <li class="change-program__item item-radio">
+              <input class="item-radio__input" id="program-slim" type="radio" name="program" value="slim" checked>
+              <label class="item-radio__label" for="program-slim">Похудение</label>
+            </li>
+            <li class="change-program__item item-radio">
+              <input class="item-radio__input" id="program-fat" type="radio" name="program" value="fat">
+              <label class="item-radio__label" for="program-fat">Набор массы</label>
+            </li>
+            <li class="change-program__item item-radio">
+              <input class="item-radio__input" id="program-unknown" type="radio" name="program" value="unknown">
+              <label class="item-radio__label" for="program-unknown">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__owner-information owner-information">
+          <legend class = "owner-information__title">
+            Контактные данные (владельца кота)
+          </legend>
+          <ul class="owner-information__list">
+            <li class="owner-information__item item-owner">
+              <label class="item-owner__label" for="owner-email">E-mail:*</label>
+              <div class="item-owner__field-input">
+                <input class="item-owner__input" id="owner-email" type="email" name="email" placeholder="kuklachev@gmail.com"  required>
+                <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="0.65" y1="5.84766" x2="0.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
+                  <line x1="17.65" y1="5.84766" x2="17.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
+                  <line y1="13.1977" x2="18" y2="13.1977" stroke="#222222" stroke-width="1.3"/>
+                  <line y1="1.19766" x2="18" y2="1.19766" stroke="#222222" stroke-width="1.3"/>
+                  <path d="M17.35 3.02975L9.00002 9.5242L0.65 3.02975V1.49766H3.5L9.00002 1.49766H14H17.35V3.02975Z" stroke="#222222" stroke-width="1.3"/>
+                </svg>
               </div>
             </li>
-            <li class = "programs__item programs__item--fat">
-              <h3 class = "programs__title">
-                набор массы
-              </h3>
-              <p class = "programs__description">
-                Заработать авторитет среди дворовых котов и даже собак?
-                Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
-              </p>
-              <div class="programs__link-block">
-                <a href="#">
-                  каталог pro
-                </a>
+            <li class="owner-information__item item-owner">
+              <label class="item-owner__label" for="owner-telephone">Телефон:*</label>
+              <div class="item-owner__field-input">
+                <input class="item-owner__input" id="owner-telephone" type="tel" name="owner-telephone" placeholder="8 (960) 900-60-90" pattern="8 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                  <path d="M17.9 9.75275H9.39999V10.9569H17.9L15.8 13.0641L16.7 13.9672L19.8 10.8565C19.8974 10.7263 19.95 10.5678 19.95 10.405C19.95 10.2421 19.8974 10.0837 19.8 9.95344L16.7 6.84277L15.8 7.74587L17.9 9.75275Z" fill="black"/>
+                  <path d="M8.10001 19.7872V13.5659C8.08846 13.41 8.02154 13.2635 7.91142 13.153C7.80131 13.0425 7.65531 12.9754 7.50001 12.9638H3.10001C3.10516 13.2815 3.23325 13.5848 3.45718 13.8095C3.68112 14.0342 3.98336 14.1627 4.30001 14.1679H6.80001V19.1851H3.10001C2.86326 19.2 2.62591 19.1676 2.40176 19.0896C2.17762 19.0117 1.97115 18.8898 1.79436 18.7311C1.61757 18.5723 1.47399 18.3799 1.37196 18.165C1.26992 17.9501 1.21148 17.717 1.20001 17.4793V3.43111C1.19181 2.96681 1.36516 2.51774 1.68292 2.18013C2.00069 1.84252 2.43758 1.64322 2.90001 1.62492H6.80001V6.64212H4.40001C4.08336 6.64729 3.78112 6.77581 3.55718 7.00052C3.33325 7.22523 3.20516 7.52851 3.20001 7.84625H7.60001C7.75531 7.83466 7.90131 7.76751 8.01142 7.65701C8.12154 7.54651 8.18846 7.40002 8.20001 7.24418V0.922517C8.15232 0.76584 8.06117 0.626022 7.93721 0.519407C7.81325 0.412792 7.66161 0.343785 7.50001 0.320453H3.10001C2.70599 0.307054 2.31321 0.371716 1.94411 0.510744C1.57501 0.649771 1.23684 0.860436 0.948933 1.13069C0.661026 1.40095 0.42903 1.7255 0.266207 2.08579C0.103385 2.44608 0.01293 2.83504 1.46306e-05 3.23043V17.1782C-0.0289644 17.5773 0.0246504 17.978 0.157487 18.3552C0.290324 18.7324 0.499509 19.078 0.771886 19.3701C1.04426 19.6623 1.37394 19.8947 1.74019 20.0529C2.10643 20.211 2.50132 20.2913 2.90001 20.2889H7.50001C7.5735 20.304 7.64943 20.3022 7.72216 20.2839C7.7949 20.2655 7.86259 20.2309 7.92021 20.1828C7.97783 20.1346 8.02391 20.074 8.05504 20.0055C8.08616 19.9371 8.10153 19.8624 8.10001 19.7872Z" fill="black"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0">
+                  <rect width="20" height="20.0688" fill="white" transform="translate(0 0.320435)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
               </div>
             </li>
           </ul>
-        </div>
-      </section>
-      <section class="how-work">
-        <div class="how-work__wrapper container">
-          <div class="how-work__title-block">
-            <h2 class="how-work__title">
-              Как это работает
-            </h2>
-          </div>
-          <ul class = "how-work__list">
-            <li class = "how-work__item how-work__item--content">
-              <p class = "how-work__item-text">
-                Функциональное питание содержит только полезные питательные вещества.
-              </p>
+        </fieldset>
+
+        <fieldset class="form__comments comments">
+          <legend class = "comments__title">
+            Комментарий
+          </legend>
+          <p class="comments__item">
+            <label class="visually-hidden" for="comments-text">Текст комментария</label>
+            <textarea class="comments__text" id="comments-text" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </p>
+        </fieldset>
+
+        <fieldset class="form__products-additional products-additional">
+          <legend class = "products-additional__title">Дополнительно</legend>
+          <ul class="products-additional__list">
+            <li class="products-additional__item item-checkbox">
+              <input class="item-checkbox__input" id="sweetener" type="checkbox" name="sweetener" checked>
+              <label class="item-checkbox__label" for="sweetener">Сахарозаменитель</label>
             </li>
-            <li class = "how-work__item how-work__item--powder">
-              <p class = "how-work__item-text">
-                Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-              </p>
+            <li class="products-additional__item item-checkbox">
+              <input class="item-checkbox__input" id="water" type="checkbox" name="water">
+              <label class="item-checkbox__label" for="water">Питьевая вода</label>
             </li>
-            <li class = "how-work__item how-work__item--meals">
-              <p class = "how-work__item-text">
-                Замените один-два приема обычной еды на наше функциональное питание.
-              </p>
+            <li class="products-additional__item item-checkbox">
+              <input class="item-checkbox__input" id="milk" type="checkbox" name="milk">
+              <label class="item-checkbox__label" for="milk">Молоко</label>
             </li>
-            <li class = "how-work__item how-work__item--result">
-              <p class = "how-work__item-text">
-                Уже через месяц  наслаждайтесь изменениями к лучшему вашего питомца!
-              </p>
+            <li class="products-additional__item item-checkbox">
+              <input class="item-checkbox__input" id="vitamins" type="checkbox" name="vitamins">
+              <label class="item-checkbox__label" for="vitamins">Витамины</label>
             </li>
           </ul>
+        </fieldset>
+
+        <div class="form__button">
+          <button class="button" type="submit">отправить заявку</button>
         </div>
-      </section>
-      <section class="living-example">
-        <div class="living-example__wrapper container">
-          <div class="living-example__title-block">
-            <h2 class="living-example__title">
-              Живой пример
-            </h2>
-          </div>
-          <div class="living-example__stats-block stats">
-            <p class="stats__description">
-              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
-              Cat Energy Slim. Отличный результат без изнуряющих тренировок!
-              При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-            </p>
-            <dl class="stats__list">
-              <div class="stats__item">
-                <dt class="stats__quantity">
-                  5 кг
-                </dt>
-                <dd class="stats__description">
-                  снижение веса
-                </dd>
-              </div>
-              <div class="stats__item">
-                <dt class="stats__quantity">
-                  60 ДНЕЙ
-                </dt>
-                <dd class="stats__description">
-                  затрачено времени
-                </dd>
-              </div>
-            </dl>
-            <p class="stats__cost">
-              <span>
-                Затраты на питание:
-              </span>
-              <span>
-                15 000 РУБ.
-              </span>
-            </p>
-          </div>
-          <div class="living-example__slider-block slider">
-            <div class="slider__picture-block slider-picture">
-              <ul class="slider-picture__list">
-                <li class="slider-picture__item slider-picture__item--current">
-                  <img src="img/cat-before.png" width="311" height="232" alt="Кот до начала программы">
-                </li>
-                <li class="slider-picture__item">
-                  <img src="img/cat-after.png" width="251" height="240" alt="Кот после программы">
-                </li>
-              </ul>
-            </div>
-            <div class="slider__range-block slider-range">
-              <button class="slider-range__toggle slider-range__toggle--current" type="button">
-                было
-              </button>
-              <div class="slider-range__scale">
-                <div class="slider-range__bar"></div>
-              </div>
-              <button class="slider-range__toggle" type="button">
-                стало
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+
+        <p class="form__notice">
+          * — Обязательные поля
+        </p>
+
+      </form>
+
     </main>
+
     <footer class="page-footer">
       <section class="page-footer__contacts-block contacts">
         <h2 class="visually-hidden">
@@ -261,7 +232,7 @@
             </div>
             <div class="copyright__image-block">
               <a class="copyright__image-link" href="https://htmlacademy.ru/intensive/adaptive">
-                <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка HTML Academy">
+                <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="HTML Academy">
                   <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
                 </svg>
               </a>
