@@ -1,0 +1,73 @@
+.functional-food {
+  outline: 5px solid rgba(100, 0, 255, 0.5);
+  outline-offset: -5px;
+}
+
+.functional-food__wrapper {
+  margin-bottom: 22px;
+  position: relative;
+  min-height: 480px;
+}
+
+.functional-food__text-block {
+  min-height: 302px;
+  background-image: url("../../img/index-cat-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.functional-food__text-block::before {
+  content: "";
+  min-height: 302px;
+  width: 100%;
+  background-color: fade(@green, 85%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.functional-food__wrapper-text {
+  width: 280px;
+  min-height: 302px;
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  margin-left: -140px;
+  text-align: center;
+}
+
+.functional-food__title {
+  color: @white-basic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 25px;
+}
+
+.functional-food__slogan {
+  color: @white-basic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.functional-food__picture-block {
+  position: absolute;
+  left: 50%;
+  top: 167px;
+  margin-left: -140px;
+}
+
+.functional-food__picture-block img {
+  width: 280px;
+  height: 270px;
+}
+
+.functional-food__link-block {
+  position: absolute;
+  left: 50%;
+  margin-left: -140px;
+  bottom: 0;
+}
