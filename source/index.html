@@ -9,7 +9,7 @@
 
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="page-header__logo-block container">
+        <div class="page-header__logo-block">
           <a class="page-header__logo-link-image">
             <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип-картинка магазина «Кэт энерджи»">
           </a>
@@ -48,19 +48,21 @@
       <section class="functional-food">
         <div class="functional-food__wrapper">
           <div class="functional-food__text-block">
-            <div class="functional-food__wrapper-text container">
-              <h2 class="functional-food__title">
-                Функциональное  питание для котов
-              </h2>
-              <p class="functional-food__slogan">
-                Занялся собой? Займись котом!
-              </p>
+            <div class="functional-food__wrapper-base">
+              <div class="functional-food__wrapper-text">
+                <h2 class="functional-food__title">
+                  Функциональное  питание для котов
+                </h2>
+                <p class="functional-food__slogan">
+                  Занялся собой? Займись котом!
+                </p>
+              </div>
             </div>
           </div>
-          <div class="functional-food__picture-block container">
+          <div class="functional-food__picture-block ">
             <img src="img/picture-food-index.png" width="280" height="270" alt="Товар магазина «Кэт энерджи»">
           </div>
-          <div class="functional-food__link-block container">
+          <div class="functional-food__link-block ">
             <a class="button button--program functional-food__button" href="form.html">
               подобрать программу
             </a>
@@ -94,7 +96,7 @@
                 набор массы
               </h3>
               <p class = "programs__description">
-                Заработать авторитет среди дворовых котов и даже собак?
+                Заработать авторитет среди дворовых котов и&nbsp;даже собак?
                 Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
               <div class="programs__link-block">
@@ -130,7 +132,7 @@
             </li>
             <li class = "how-work__item how-work__item--result">
               <p class = "how-work__item-text">
-                Уже через месяц  наслаждайтесь изменениями к лучшему вашего питомца!
+                Уже через месяц  наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
               </p>
             </li>
           </ul>
@@ -139,63 +141,69 @@
 
       <section class="living-example">
         <div class="living-example__wrapper">
-          <div class="container">
+          <div class="living-example__title-wrapper container">
             <h2 class="living-example__title">
               Живой пример
             </h2>
           </div>
-          <div class="living-example__stats-block stats container">
-            <p class="stats__description">
-              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
-              Cat Energy Slim. Отличный результат без изнуряющих тренировок!
-              При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-            </p>
-            <dl class="stats__list">
-              <div class="stats__item">
-                <dt class="stats__quantity">
-                  5 кг
-                </dt>
-                <dd class="stats__quantity-description">
-                  снижение веса
-                </dd>
+          <div class="living-example__wrapper-content">
+            <div class="living-example__conteiner-content">
+              <div class="living-example__stats-block stats">
+                <p class="stats__description">
+                  Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
+                  Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+                  При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+                </p>
+                <div class="stats__wrapper">
+                  <dl class="stats__list">
+                    <div class="stats__item">
+                      <dt class="stats__quantity">
+                        5 кг
+                      </dt>
+                      <dd class="stats__quantity-description">
+                        снижение веса
+                      </dd>
+                    </div>
+                    <div class="stats__item">
+                      <dt class="stats__quantity">
+                        60 ДНЕЙ
+                      </dt>
+                      <dd class="stats__quantity-description">
+                        затрачено времени
+                      </dd>
+                    </div>
+                  </dl>
+                  <p class="stats__cost">
+                    <span>
+                      Затраты на питание:
+                    </span>
+                    <span>
+                      15 000 РУБ.
+                    </span>
+                  </p>
+                </div>
               </div>
-              <div class="stats__item">
-                <dt class="stats__quantity">
-                  60 ДНЕЙ
-                </dt>
-                <dd class="stats__quantity-description">
-                  затрачено времени
-                </dd>
+              <div class="living-example__slider-block slider">
+                <ul class="slider__list">
+                  <li class="slider__item slider__item--current">
+                    <img src="img/cat-before.png" width="311" height="232" alt="Кот до начала программы">
+                  </li>
+                  <li class="slider__item">
+                    <img src="img/cat-after.png" width="251" height="240" alt="Кот после программы">
+                  </li>
+                </ul>
+                <div class="slider__range-block slider-range">
+                  <button class="slider-range__toggle slider-range__toggle--current" type="button">
+                    было
+                  </button>
+                  <div class="slider-range__scale">
+                    <div class="slider-range__bar"></div>
+                  </div>
+                  <button class="slider-range__toggle" type="button">
+                    стало
+                  </button>
+                </div>
               </div>
-            </dl>
-            <p class="stats__cost">
-              <span>
-                Затраты на питание:
-              </span>
-              <span>
-                15 000 РУБ.
-              </span>
-            </p>
-          </div>
-          <div class="living-example__slider-block slider">
-            <ul class="slider__list">
-              <li class="slider__item slider__item--current">
-                <img src="img/cat-before.png" width="311" height="232" alt="Кот до начала программы">
-              </li>
-              <li class="slider__item">
-                <img src="img/cat-after.png" width="251" height="240" alt="Кот после программы">
-              </li>
-            </ul>
-            <div class="slider__range-block slider-range container">
-              <button class="slider-range__toggle slider-range__toggle--current" type="button">
-                было
-              </button>
-              <div class="slider-range__scale">
-                <div class="slider-range__bar"></div>
-              </div>
-              <button class="slider-range__toggle" type="button">
-                стало
-              </button>
             </div>
           </div>
         </div>
@@ -209,7 +217,7 @@
         <h2 class="visually-hidden">
           Контакты магазина
         </h2>
-        <div class="contacts__text-block container">
+        <div class="contacts__text-block">
           <p class="contacts__invitation">
             Приглашаем к&nbsp;сотрудничеству  дилеров!
           </p>

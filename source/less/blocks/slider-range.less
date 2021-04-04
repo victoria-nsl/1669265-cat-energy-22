@@ -1,3 +1,9 @@
+.slider-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .slider-range__toggle {
   font-family: inherit;
   font-weight: normal;
@@ -5,6 +11,11 @@
   line-height: 20px;
   text-transform: uppercase;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .slider-range__scale {
@@ -15,6 +26,11 @@
   background-color: @white-basic;
   padding: 4px 43px 4px 6px;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+  }
 }
 
 .slider-range__bar {
@@ -22,4 +38,12 @@
   height: 6px;
   background-color: @green;
   border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 8px;
+    height: 8px;
+    margin-left: 214px;
+    margin-top: -4px;
+    border-radius: 50%;
+  }
 }
