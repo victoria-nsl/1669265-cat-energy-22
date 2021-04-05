@@ -1,11 +1,10 @@
 .functional-food__wrapper {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   min-height: 480px;
 
   @media (min-width: @tablet-width) {
     min-height: 858px;
-    padding-left: 117px;
     margin-bottom: 0;
   }
 
@@ -30,7 +29,7 @@
     background-image: url("../img/index-cat-desktop.jpg");
     min-height: 694px;
     margin: 0 auto;
-    margin-left: 610px;
+    margin-left: 720px;
     margin-top: -127px;
   }
 }
@@ -57,40 +56,30 @@
   }
 }
 
-.functional-food__wrapper-base {
-  position: absolute;
-  top: -3px;
-  left: 50%;
-  width: 320px;
-  min-height: 302px;
-  padding: 0 20px;
-  box-sizing: border-box;
-  margin-left: -160px;
-  text-align: center;
-}
-
 .functional-food__wrapper-text {
-  width: 249px;
-  padding-left: 16px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  min-height: 302px;
+  margin-top: -3px;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     width: 708px;
-    padding-left: 89px;
-    padding-right: 205px;
-    margin: 0 auto;
-    margin-left: -273px;
+    min-height: 181px;
+    margin-left: 0;
+    padding-left: 87px;
     box-sizing: border-box;
     text-align: start;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
-    padding-left: 80px;
-    padding-right: 726px;
-    margin: 0 auto;
-    margin-left: -834px;
-    margin-top: 225px;
-    box-sizing: border-box;
+    top: 177px;
+    width: 414px;
+    margin-left: -682px;
+    padding-left: 0;
     text-align: start;
   }
 }
@@ -103,6 +92,7 @@
   color: @white-basic;
 
   @media (min-width: @tablet-width) {
+    width: 414px;
     margin-bottom: 42px;
     font-size: 60px;
     line-height: 60px;
@@ -128,53 +118,43 @@
   }
 }
 
-.functional-food__picture-block {
-  position: absolute;
-  left: 50%;
-  top: 165px;
-  margin-left: -140px;
-
-  @media (min-width: @tablet-width) {
-    top: 248px;
-    width: 708px;
-    height: 609px;
-    margin: 0 auto;
-    margin-left: -355px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 552px;
-    height: 499px;
-    margin: 0 auto;
-    margin-left: -150px;
-    top: 143px;
-  }
-}
-
-.functional-food__picture-block img {
+.functional-food__picture {
+  position: relative;
+  display: block;
   width: 280px;
   height: 270px;
+  margin: 0 auto;
+  margin-top: -135px;
+  margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
-    width: 710px;
+    width: 708px;
     height: 609px;
+    margin-top: 67px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 75px;
+    left: 50%;
     width: 552px;
     height: 499px;
+    margin-left: -135px;
   }
 }
 
-.functional-food__link-block {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  margin-left: -140px;
+.functional-food__button {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    position: absolute;
     top: 277px;
-    margin-left: -275px;
+    left: 50%;
+    width: 244px;
+    margin-left: -272px;
   }
 
   @media (min-width: @desktop-width) {
