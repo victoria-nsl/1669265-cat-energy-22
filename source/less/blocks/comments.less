@@ -1,24 +1,28 @@
-.comments {
-  outline: 5px solid rgba(0, 255, 0, 0.5);
-  outline-offset: -5px;
-}
-
 .comments__title {
-  margin-bottom: 38px;
+  padding-top: 6px;
+  padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 34px;
+  }
 }
 
 .comments__item {
   margin: 0 auto;
-  margin-bottom: 18px;
 }
 
 .comments__text {
   width: 280px;
   height: 151px;
-  padding: 9px 12px 10px 15px;
+  padding: 8px 13px 8px 13px;
   font-family: inherit;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -26,4 +30,12 @@
   box-sizing: border-box;
   border: 1px solid @grey-textarea;
   resize: none;
+
+  @media (min-width: @tablet-width) {
+    width: 631px;
+    height: 174px;
+    padding: 10px 19px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

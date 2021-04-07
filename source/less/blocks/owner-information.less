@@ -1,52 +1,71 @@
-.owner-information {
-  outline: 5px solid rgba(0, 255, 0, 0.5);
-  outline-offset: -5px;
-}
-
 .owner-information__title {
-  margin-bottom: 21px;
+  padding-top: 25px;
+  padding-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 75px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 48px;
+  }
 }
 
 .owner-information__list {
   list-style: none;
   margin: 0 auto;
-  padding: 0;
   padding-top: 14px;
-  padding-bottom: 12px;
+  padding-bottom: 6px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 35px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .owner-information__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
   margin-bottom: 14px;
 
-  &:nth-child(1) .owner-information__input {
-    width: 219px;
-    box-sizing: border-box;
+  @media (min-width: @tablet-width) {
+    width: 631px;
+    margin-bottom: 18px;
   }
 
-  &:nth-child(2) .owner-information__input {
-    width: 204px;
-    box-sizing: border-box;
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    margin-bottom: 13px;
   }
 }
 
 .owner-information__label {
-  margin-right: 5px;
-  display: inline-block;
-  vertical-align: middle;
+  margin-right: 8px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+  }
 }
 
 .owner-information__field-input {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.owner-information__input {
-  padding: 12px 14px 12px 14px;
+  flex-grow: 1;
 }
 
 .owner-information__field-input svg {
   position: absolute;
-  top: 17px;
-  right: 13px;
+  top: 15px;
+  right: 15px;
+}
+
+.owner-information__input {
+  width: 100%;
 }
