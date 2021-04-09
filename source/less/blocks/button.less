@@ -13,6 +13,14 @@
   background-color: @green;
   border: none;
 
+  @media (min-width: @tablet-width) {
+    width: 248px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 168px;
+  }
+
   &--program {
     font-size: 14px;
     line-height: 18px;
@@ -36,6 +44,16 @@
 
     @media (min-width: @desktop-width) {
       width: 568px;
+    }
+  }
+
+  &--additional-products {
+    @media (min-width: @tablet-width) {
+      width: 632px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 245px;
     }
   }
 
