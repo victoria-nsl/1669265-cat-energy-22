@@ -1,6 +1,16 @@
 .catalog-main__wrapper-title {
-  padding-top: 27px;
-  padding-bottom: 41px;
+  padding-top: 26px;
+  padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 48px;
+    padding-bottom: 83px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 84px;
+  }
 }
 
 
@@ -9,4 +19,9 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
