@@ -21,7 +21,7 @@
   width: 280px;
   height: 38px;
   margin: 0 auto;
-  padding: 15px 20px 14px 20px;
+  padding: 12px 20px 15px 20px;
 
   @media (min-width: @tablet-width) {
     justify-content: space-between;
@@ -35,6 +35,41 @@
     width: 202px;
     height: 59px;
     padding: 53px 0 15px 0;
+  }
+}
+
+.page-header__logo-link-text {
+  padding-top: 14px;
+  padding-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 19px;
+    padding-bottom: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 23px;
+    padding-bottom: 15px;
+  }
+}
+
+.page-header__logo-block:not(.page-header__logo-block--current) a:hover {
+  opacity: 0.8;
+}
+
+.page-header__logo-block:not(.page-header__logo-block--current):hover {
+  @media (min-width: @tablet-width) {
+    opacity: 0.8;
+  }
+}
+
+.page-header__logo-block:not(.page-header__logo-block--current) a:active {
+  opacity: 0.6;
+}
+
+.page-header__logo-block:not(.page-header__logo-block--current):active {
+  @media (min-width: @tablet-width) {
+    opacity: 0.6;
   }
 }
 
@@ -56,14 +91,37 @@
 
 .page-header__logo-link-image {
   margin-right: 54px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 14px;
+  }
 }
 
 .page-header__logo-link-image img {
   width: 34px;
   height: 38px;
+
+  @media (min-width: @tablet-width) {
+    width: 61px;
+    height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+    height: 59px;
+  }
 }
 
 .page-header__logo-link-text img {
   width: 101px;
   height: 18px;
+
+  @media (min-width: @desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
 }
