@@ -67,6 +67,30 @@
   right: 15px;
 }
 
+.owner-information__input-icon-email {
+  stroke: @special_dark-grey-2;
+}
+
+.owner-information__input--email:focus + .owner-information__input-icon-email {
+  stroke: @green;
+}
+
+.owner-information__input--email:invalid + .owner-information__input-icon-email {
+  stroke: @red-error;
+}
+
+.owner-information__input-icon-tel {
+  fill: @black-basic;
+}
+
+.owner-information__input--tel:focus + .owner-information__input-icon-tel {
+  fill: @green;
+}
+
+.owner-information__input--tel:invalid + .owner-information__input-icon-tel {
+  fill: @red-error;
+}
+
 .owner-information__input {
   width: 100%;
 }
