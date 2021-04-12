@@ -1,14 +1,12 @@
 .how-work__wrapper {
   margin-bottom: 45px;
-  padding-top: 8px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 12px;
-    margin-bottom: 0;
+    margin-bottom: 45px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 0;
+    margin-bottom: 69px;
   }
 }
 
@@ -21,9 +19,13 @@
   line-height: 40px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 72px;
+    margin-bottom: 32px;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 32px;
   }
 }
 
@@ -40,20 +42,55 @@
 }
 
 .how-work__item {
+  position: relative;
   margin-bottom: 26px;
   padding-left: 80px;
 
   @media (min-width: @tablet-width) {
     width: 326px;
     padding-left: 0;
-    padding-top: 113px;
-    padding-bottom: 50px;
-    margin-bottom: 82px;
+    padding-top: 151px;
+    padding-bottom: 57px;
+    margin-bottom: 37px;
+
+    &--content {
+      background-image: url("../img/how-1.png");
+      background-repeat: no-repeat;
+      background-position: 125px 40px;
+    }
+
+    &--powder {
+      background-image: url("../img/how-2.png");
+      background-repeat: no-repeat;
+      background-position: 125px 40px;
+    }
+
+    &--meals {
+      background-image: url("../img/how-3.png");
+      background-repeat: no-repeat;
+      background-position: 125px 40px;
+    }
+
+    &--result {
+      background-image: url("../img/how-4.png");
+      background-repeat: no-repeat;
+      background-position: 125px 40px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 246px;
-    margin-bottom: 60px;
+    margin-bottom: 0;
+  }
+}
+
+.how-work__item:last-child {
+  margin-bottom: 0;
+}
+
+.how-work__item:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -70,5 +107,87 @@
     width: 245px;
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.how-work__item-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: @green;
+
+  @media (min-width: @tablet-width) {
+    top: 40px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
+.how-work__item-text--content::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  width: 30px;
+  height: 32px;
+  background-image: url("../img/how-work-1.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 65px;
+    left: 25px;
+  }
+}
+
+
+.how-work__item-text--powder::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  width: 29px;
+  height: 31px;
+  background-image: url("../img/how-work-2.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 65px;
+    left: 27px;
+  }
+}
+
+.how-work__item-text--meals::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  width: 25px;
+  height: 30px;
+  background-image: url("../img/how-work-3.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 65px;
+    left: 27px;
+  }
+}
+
+.how-work__item-text--result::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 32px;
+  height: 33px;
+  background-image: url("../img/how-work-4.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 63px;
+    left: 25px;
   }
 }

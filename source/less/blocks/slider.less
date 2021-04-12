@@ -1,8 +1,6 @@
 .slider {
-  @media (min-width: @tablet-width) {
-    position: relative;
-    height: 462px;
-    background-color: @grey;
+  @media (min-width: @desktop-width) {
+    width: 690px;
   }
 }
 
@@ -10,10 +8,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
 }
 
@@ -43,13 +41,13 @@
     top: -150px;
     left: 0;
     width: 708px;
-    height: 607px;
+    height: 620px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 690px;
-    height: 656px;
     top: -250px;
+    width: 690px;
+    height: 536px;
   }
 }
 
@@ -67,25 +65,22 @@
 
   @media (min-width: @desktop-width) {
     width: 690px;
-    height: 656px;
+    height: 654px;
   }
 }
 
 .slider__range-block {
-  width: 210px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     position: absolute;
     left: 50%;
-    top: 361px;
-    margin-left: -300px;
-    width: 570px;
-    box-sizing: border-box;
+    top: 357px;
+    margin-left: -285px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 295px;
-    margin-left: -220px;
+    top: 285px;
+    margin-left: -225px;
   }
 }
