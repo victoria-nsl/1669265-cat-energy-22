@@ -1,3 +1,13 @@
+.form__wrapper-information-program {
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 0 110px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .form fieldset {
   padding: 0;
   margin: 0;
@@ -28,9 +38,12 @@
   }
 }
 
+/* Чекбоксы, радиокнопки*/
+
 .form__label--checkbox {
   position: relative;
   margin-left: 46px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin-left: 59px;
@@ -40,22 +53,22 @@
 .form__label--radio {
   position: relative;
   margin-left: 45px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin-left: 89px;
   }
 }
 
-
 .form__input {
   display: none;
 }
 
-
 .form__input--checkbox + .form__label--checkbox::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: -46px;
   width: 30px;
   height: 30px;
@@ -65,41 +78,31 @@
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-    top: -3px;
     left: -59px;
   }
-
-  @media (min-width: @desktop-width) {
-    top: -5px;
-  }
 }
-
 
 .form__input--checkbox:checked + .form__label--checkbox::after {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   left: -40px;
   width: 18px;
   height: 14px;
-  background-image: url("../../img/icon-check.svg");
+  background-image: url("../img/icon-check.svg");
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
     left: -48px;
-    top: 10px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 8px;
   }
 }
-
 
 .form__input--radio + .form__label--radio::before {
   content: "";
   position: absolute;
-  top: -3px;
+  top: 50%;
+  transform: translateY(-50%);
   left: -45px;
   width: 30px;
   height: 30px;
@@ -110,16 +113,15 @@
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-    top: -4px;
     left: -59px;
   }
 }
 
-
 .form__input--radio:checked + .form__label--radio::after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 50%;
+  transform: translateY(-50%);
   left: -37px;
   width: 14px;
   height: 14px;
@@ -129,7 +131,6 @@
   @media (min-width: @tablet-width) {
     width: 18px;
     height: 18px;
-    top: 7px;
     left: -48px;
   }
 }
@@ -146,9 +147,10 @@
   opacity: 0.3;
 }
 
+/* Текстовые поля ввода */
 
 .form__input-text {
-  padding: 12px 14px 12px 14px;
+  padding: 13px 14px 14px 14px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -160,7 +162,7 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding: 11px 19px 11px 19px;
+    padding: 10px 19px 11px 19px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -173,6 +175,11 @@
 .form__input-text:focus {
   border: 2px solid @grey-special-dark;
   outline: none;
+  padding: 12px 14px 13px 14px;
+
+  @media (min-width: @tablet-width) {
+    padding: 9px 19px 10px 19px;
+  }
 }
 
 .form__input-text:invalid {
@@ -182,6 +189,45 @@
 .form__input-text::placeholder {
   color: @grey-special-dark;
 }
+
+/*Текстовые поля ввода - Контактные данные владельца */
+
+.form__field-input-text-owner-information {
+  position: relative;
+}
+
+.form__field-input-text-owner-information svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+
+.form__input-text-icon-email {
+  stroke: @special_dark-grey-2;
+}
+
+.form__input-text--email:focus + .form__input-text-icon-email {
+  stroke: @green;
+}
+
+.form__input-text--email:invalid + .form__input-text-icon-email {
+  stroke: @red-error;
+}
+
+.form__input-text-icon-tel {
+  fill: @black-basic;
+}
+
+.form__input-text--tel:focus + .form__input-text-icon-tel {
+  fill: @green;
+}
+
+.form__input-text--tel:invalid + .form__input-text-icon-tel {
+  fill: @red-error;
+}
+
+/*Кнопка*/
 
 .form__wrapper-button-notice {
   @media (min-width: @tablet-width) {
@@ -209,6 +255,8 @@
   }
 }
 
+/*Примечание: отправить заявку*/
+
 .form__notice {
   margin: 0 auto;
   margin-bottom: 32px;
@@ -224,127 +272,5 @@
     margin: 0;
     font-size: 16px;
     line-height: 16px;
-  }
-}
-
-.form__owner-information {
-  position: relative;
-}
-
-.form__owner-information::after {
-  content: "";
-  position: absolute;
-  top: -56px;
-  right: 0;
-  width: calc(50% - 61px);
-  height: 2px;
-  background: @green;
-
-  @media (min-width: @tablet-width) {
-    width: calc(50% - 239px);
-    top: -54px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: calc(50% + 58px);
-  }
-}
-
-.form__owner-information::before {
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    top: -54px;
-    left: 0;
-    width: calc(50% - 354px);
-    height: 2px;
-    background: @green;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: calc(50% - 650px);
-  }
-}
-
-
-.form__comments {
-  position: relative;
-}
-
-.form__comments::after {
-  content: "";
-  position: absolute;
-  top: -48px;
-  right: 0;
-  width: calc(50% - 2px);
-  height: 2px;
-  background: @green;
-
-  @media (min-width: @tablet-width) {
-    width: calc(50% + 94px);
-    top: -89px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: calc(50% + 388px);
-    top: -91px;
-  }
-}
-
-.form__comments::before {
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    top: -89px;
-    left: 0;
-    width: calc(50% - 354px);
-    height: 2px;
-    background: @green;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: calc(50% - 650px);
-    top: -91px;
-  }
-}
-
-.form__products-additional {
-  position: relative;
-}
-
-.form__products-additional::after {
-  content: "";
-  position: absolute;
-  top: -39px;
-  right: 0;
-  width: calc(50% - 24px);
-  height: 2px;
-  background: @green;
-
-  @media (min-width: @tablet-width) {
-    width: calc(50% + 62px);
-    top: -68px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: calc(50% + 358px);
-    top: -69px;
-  }
-}
-
-.form__products-additional::before {
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    top: -68px;
-    left: 0;
-    width: calc(50% - 354px);
-    height: 2px;
-    background: @green;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: calc(50% - 650px);
-    top: -69px;
   }
 }

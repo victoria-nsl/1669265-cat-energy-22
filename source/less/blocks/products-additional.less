@@ -1,3 +1,44 @@
+.products-additional {
+  position: relative;
+}
+
+.products-additional::after {
+  content: "";
+  position: absolute;
+  top: -39px;
+  right: 0;
+  width: calc(50% - 24px);
+  height: 2px;
+  background: @green;
+
+  @media (min-width: @tablet-width) {
+    width: calc(50% + 62px);
+    top: -68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: calc(50% + 358px);
+    top: -69px;
+  }
+}
+
+.products-additional::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -68px;
+    left: 0;
+    width: calc(50% - 354px);
+    height: 2px;
+    background: @green;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: calc(50% - 650px);
+    top: -69px;
+  }
+}
+
 .products-additional__title {
   padding-top: 16px;
   padding-bottom: 30px;
