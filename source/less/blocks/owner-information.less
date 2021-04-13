@@ -1,3 +1,42 @@
+.owner-information {
+  position: relative;
+}
+
+.owner-information::after {
+  content: "";
+  position: absolute;
+  top: -56px;
+  right: 0;
+  width: calc(50% - 61px);
+  height: 2px;
+  background: @green;
+
+  @media (min-width: @tablet-width) {
+    width: calc(50% - 239px);
+    top: -54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: calc(50% + 58px);
+  }
+}
+
+.owner-information::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -54px;
+    left: 0;
+    width: calc(50% - 354px);
+    height: 2px;
+    background: @green;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: calc(50% - 650px);
+  }
+}
+
 .owner-information__title {
   padding-top: 25px;
   padding-bottom: 21px;
@@ -8,7 +47,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 48px;
+    padding-top: 53px;
   }
 }
 
@@ -55,18 +94,10 @@
   }
 }
 
-.owner-information__field-input {
-  position: relative;
+.owner-information__field-input-text {
   flex-grow: 1;
 }
 
-.owner-information__field-input svg {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 15px;
-}
-
-.owner-information__input {
+.owner-information__field-input-text input {
   width: 100%;
 }

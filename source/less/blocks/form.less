@@ -1,3 +1,13 @@
+.form__wrapper-information-program {
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 0 110px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .form fieldset {
   padding: 0;
   margin: 0;
@@ -28,8 +38,119 @@
   }
 }
 
+/* Чекбоксы, радиокнопки*/
+
+.form__label--checkbox {
+  position: relative;
+  margin-left: 46px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 59px;
+  }
+}
+
+.form__label--radio {
+  position: relative;
+  margin-left: 45px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 89px;
+  }
+}
+
+.form__input {
+  display: none;
+}
+
+.form__input--checkbox + .form__label--checkbox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -46px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @grey-border;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: -59px;
+  }
+}
+
+.form__input--checkbox:checked + .form__label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -40px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/icon-check.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    left: -48px;
+  }
+}
+
+.form__input--radio + .form__label--radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -45px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @grey-border;
+  border-radius: 50%;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: -59px;
+  }
+}
+
+.form__input--radio:checked + .form__label--radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -37px;
+  width: 14px;
+  height: 14px;
+  background-color: @green;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    left: -48px;
+  }
+}
+
+.form__input--checkbox:hover + .form__label--checkbox::before,
+.form__input--radio:hover + .form__label--radio::before {
+  border-color: @grey-border-4;
+}
+
+.form__input--checkbox:disabled + .form__label--checkbox::before,
+.form__input--checkbox:disabled + .form__label--checkbox::after,
+.form__input--radio:disabled + .form__label--radio::before,
+.form__input--radio:disabled + .form__label--radio::after {
+  opacity: 0.3;
+}
+
+/* Текстовые поля ввода */
+
 .form__input-text {
-  padding: 12px 14px 12px 14px;
+  padding: 13px 14px 14px 14px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -37,23 +158,76 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @grey-special-dark;
-  border: 1px solid @grey-border;
+  border: 1px solid @grey-textarea;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding: 11px 19px 11px 19px;
+    padding: 10px 19px 11px 19px;
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.form__input-text:hover {
+  border-color: @grey-border;
+}
+
+.form__input-text:focus {
+  border: 2px solid @grey-special-dark;
+  outline: none;
+  padding: 12px 14px 13px 14px;
+
+  @media (min-width: @tablet-width) {
+    padding: 9px 19px 10px 19px;
+  }
+}
+
+.form__input-text:invalid {
+  border: 2px solid @red-error;
 }
 
 .form__input-text::placeholder {
   color: @grey-special-dark;
 }
 
-.form__input {
-  display: none;
+/*Текстовые поля ввода - Контактные данные владельца */
+
+.form__field-input-text-owner-information {
+  position: relative;
 }
+
+.form__field-input-text-owner-information svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+
+.form__input-text-icon-email {
+  stroke: @special_dark-grey-2;
+}
+
+.form__input-text--email:focus + .form__input-text-icon-email {
+  stroke: @green;
+}
+
+.form__input-text--email:invalid + .form__input-text-icon-email {
+  stroke: @red-error;
+}
+
+.form__input-text-icon-tel {
+  fill: @black-basic;
+}
+
+.form__input-text--tel:focus + .form__input-text-icon-tel {
+  fill: @green;
+}
+
+.form__input-text--tel:invalid + .form__input-text-icon-tel {
+  fill: @red-error;
+}
+
+/*Кнопка*/
 
 .form__wrapper-button-notice {
   @media (min-width: @tablet-width) {
@@ -80,6 +254,8 @@
     margin-right: 81px;
   }
 }
+
+/*Примечание: отправить заявку*/
 
 .form__notice {
   margin: 0 auto;

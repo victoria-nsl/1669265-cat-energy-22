@@ -53,6 +53,7 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     width: 428px;
     height: 6px;
     background: @grey-slider;
@@ -69,8 +70,10 @@
   @media (min-width: @tablet-width) {
     width: 8px;
     height: 8px;
-    margin-left: 192px;
-    margin-top: -16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: 13px solid @white-basic;
     box-shadow: 0 1px 3px rgba(@black-basic, 0.16);
     border-radius: 50%;
