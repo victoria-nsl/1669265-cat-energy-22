@@ -19,7 +19,7 @@
             <img src="img/logo-text.svg" width="101" height="18" alt="Логотип-текст магазина «Кэт энерджи»">
           </a>
         </div>
-        <nav class="page-header__main-navigation main-navigation">
+        <nav class="page-header__main-navigation main-navigation main-navigation--opened main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -60,7 +60,7 @@
                 <div class="catalog-basic__wrapper-caption-description">
                   <h3 class="catalog-basic__caption">
                     <a class="catalog-basic__link-caption" href="#" aria-label="Перейти на страницу c описанием товара">
-                      Cat Energy PRO 500 г
+                      Cat Energy PRO <br>  500 г
                     </a>
                   </h3>
                   <table class="catalog-basic__description">
@@ -93,7 +93,7 @@
                 <div class="catalog-basic__wrapper-caption-description">
                   <h3 class="catalog-basic__caption">
                     <a class="catalog-basic__link-caption" href="#" aria-label="Перейти на страницу c описанием товара">
-                      Cat Energy PRO 1000 г
+                      Cat Energy PRO <br> 1000 г
                     </a>
                   </h3>
                   <table class="catalog-basic__description">
@@ -126,7 +126,7 @@
                 <div class="catalog-basic__wrapper-caption-description">
                   <h3 class="catalog-basic__caption">
                     <a class="catalog-basic__link-caption" href="#" aria-label="Перейти на страницу c описанием товара">
-                      Cat Energy PRO 500 г
+                      Cat Energy PRO <br> 500 г
                     </a>
                   </h3>
                   <table class="catalog-basic__description">
@@ -159,7 +159,7 @@
                 <div class="catalog-basic__wrapper-caption-description">
                   <h3 class="catalog-basic__caption">
                     <a class="catalog-basic__link-caption" href="#" aria-label="Перейти на страницу c описанием товара">
-                      Cat Energy PRO 1000 г
+                      Cat Energy PRO <br> 1000 г
                     </a>
                   </h3>
                   <table class="catalog-basic__description">
@@ -192,7 +192,7 @@
                 <div class="catalog-basic__wrapper-caption-description">
                   <h3 class="catalog-basic__caption">
                     <a class="catalog-basic__link-caption" href="#" aria-label="Перейти на страницу c описанием товара">
-                      Cat Energy slim 500 г
+                      Cat Energy slim <br> 500 г
                     </a>
                   </h3>
                   <table class="catalog-basic__description">
@@ -225,7 +225,7 @@
                 <div class="catalog-basic__wrapper-caption-description">
                   <h3 class="catalog-basic__caption">
                     <a class="catalog-basic__link-caption" href="#" aria-label="Перейти на страницу c описанием товара">
-                      Cat Energy slim 1000 г
+                      Cat Energy slim <br> 1000 г
                     </a>
                   </h3>
                   <table class="catalog-basic__description">
@@ -258,7 +258,7 @@
                 <div class="catalog-basic__wrapper-caption-description">
                   <h3 class="catalog-basic__caption">
                     <a class="catalog-basic__link-caption" href="#" aria-label="Перейти на страницу c описанием товара">
-                      Cat Energy slim 500 г
+                      Cat Energy slim <br> 500 г
                     </a>
                   </h3>
                   <table class="catalog-basic__description">
@@ -301,7 +301,9 @@
 
       <section class="additional-products">
         <div class="additional-products__wrapper-title">
-          <h2 class="additional-products__title">Дополнительные товары</h2>
+          <h2 class="additional-products__title">
+            <span>Дополнительные товары</span>
+          </h2>
         </div>
         <div class="additional-products__wrapper-list-order-all">
           <ul class="additional-products__list">
@@ -443,5 +445,23 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const navMain = document.querySelector('.main-navigation');
+      const navToggle = document.querySelector('.main-navigation__toggle');
+
+      navMain.classList.remove('main-navigation--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-navigation--closed')) {
+          navMain.classList.remove('main-navigation--closed');
+          navMain.classList.add('main-navigation--opened');
+        } else {
+          navMain.classList.add('main-navigation--closed');
+          navMain.classList.remove('main-navigation--opened');
+        }
+      });
+    </script>
+
   </body>
 </html>

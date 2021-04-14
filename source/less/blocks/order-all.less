@@ -1,7 +1,6 @@
 .order-all__wrapper {
   margin-bottom: 35px;
-  padding-top: 186px;
-  padding-bottom: 43px;
+  padding: 186px 61px 43px 58px;
   background-color: fade(@green, 85%);
   background-image: url("../img/gift-photo-mobile.jpg");
   background-repeat: no-repeat;
@@ -15,14 +14,15 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    padding: 186px 43px 40px 41px;
+    padding: 185px 43px 42px 41px;
     background-image: url("../img/gift-photo-desktop.jpg");
   }
 }
 
 .order-all__text {
+  position: relative;
   width: 161px;
-  margin: 0 auto;
+  margin: 0;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -37,5 +37,32 @@
 
   @media (min-width: @desktop-width) {
     text-align: center;
+  }
+}
+
+.order-all__text::before {
+  content: "";
+  position: absolute;
+  top: -127px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 80px;
+  background-image: url("../img/icon_gift.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 50%;
+    left: -345px;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 83px;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    top: -128px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

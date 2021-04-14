@@ -1,6 +1,25 @@
+.catalog-main {
+  position: relative;
+}
+
+.catalog-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: @grey-hover;
+
+  @media (min-width: @tablet-width) {
+    width: 0;
+    height: 0;
+  }
+}
+
 .catalog-main__wrapper-title {
   padding-top: 26px;
-  padding-bottom: 38px;
+  padding-bottom: 41px;
 
   @media (min-width: @tablet-width) {
     padding-top: 48px;
