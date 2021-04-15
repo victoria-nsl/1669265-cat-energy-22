@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/favicon/180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
@@ -12,13 +16,17 @@
       <div class="page-header__wrapper">
         <div class="page-header__logo-block page-header__logo-block--current">
           <a class="page-header__logo-link-image">
-            <img src="img/logo-mobile.svg" width="34" height="38" alt="Логотип-картинка магазина «Кэт энерджи»">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" alt="Логотип-картинка магазина «Кэт энерджи»">
+            </picture>
           </a>
           <a class="page-header__logo-link-text">
             <img src="img/logo-text.svg" width="101" height="18" alt="Логотип-текст магазина «Кэт энерджи»">
           </a>
         </div>
-        <nav class="page-header__main-navigation main-navigation main-navigation--opened main-navigation--nojs">
+        <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -58,7 +66,11 @@
               </p>
             </div>
           </div>
-          <img class="functional-food__picture" src="img/picture-food-index.png" width="280" height="270" alt="Товар магазина «Кэт энерджи»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/picture-food-index-desktop.png 1x, img/picture-food-index-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/picture-food-index-tablet.png 1x, img/picture-food-index-tablet@2x.png 2x">
+            <img class="functional-food__picture" src="img/picture-food-index-mobile.png" srcset="img/picture-food-index-mobile@2x.png 2x" alt="Товар магазина «Кэт энерджи»">
+          </picture>
           <a class="button button--program functional-food__button " href="form.html">
             подобрать программу
           </a>
@@ -143,7 +155,7 @@
           </div>
           <div class="living-example__wrapper-content">
             <div class="living-example__conteiner-content">
-              <div class="living-example__stats-block stats">
+              <div class="stats">
                 <p class="stats__description">
                   Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
                   Cat Energy Slim. Отличный результат без изнуряющих тренировок!
@@ -178,17 +190,25 @@
                   </p>
                 </div>
               </div>
-              <div class="living-example__slider-block slider">
+              <div class="slider">
                 <ul class="slider__list">
-                  <li class="slider__item slider__item--current">
-                    <img src="img/cat-before.png" width="311" height="232" alt="Кот до начала программы">
+                  <li class="slider__item slider__item--before">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/cat-before-desktop.png 1x, img/cat-before-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/cat-before-tablet.png 1x, img/cat-before-tablet@2x.png 2x">
+                      <img src="img/cat-before-mobile.png" srcset="img/cat-before-mobile@2x.png 2x" alt="Кот до начала программы">
+                    </picture>
                   </li>
-                  <li class="slider__item">
-                    <img src="img/cat-after.png" width="251" height="240" alt="Кот после программы">
+                  <li class="slider__item slider__item--after">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/cat-after-desktop.png 1x, img/cat-after-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/cat-after-tablet.png 1x, img/cat-after-tablet@2x.png 2x">
+                      <img src="img/cat-after-mobile.png" srcset="img/cat-after-mobile@2.png 2x" alt="Кот после программы">
+                    </picture>
                   </li>
                 </ul>
                 <div class="slider__range-block slider-range">
-                  <button class="slider-range__toggle slider-range__toggle--current" type="button">
+                  <button class="slider-range__toggle" type="button">
                     было
                   </button>
                   <div class="slider-range__scale">

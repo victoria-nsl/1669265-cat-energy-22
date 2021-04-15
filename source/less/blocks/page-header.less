@@ -24,7 +24,7 @@
   padding: 12px 20px 15px 20px;
 
   @media (min-width: @tablet-width) {
-    justify-content: space-between;
+    display: block;
     width: 174px;
     height: 52px;
     margin: 0;
@@ -41,17 +41,50 @@
 .page-header__logo-link-text {
   padding-top: 14px;
   padding-bottom: 8px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    padding-top: 19px;
-    padding-bottom: 14px;
+    display: none;
+  }
+}
+
+.page-header__logo-link-text img {
+  width: 101px;
+  height: 18px;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__logo-link-image {
+  margin-right: 54px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 23px;
-    padding-bottom: 15px;
+    margin-right: 0;
   }
 }
+
+.page-header__logo-link-image img {
+  width: 34px;
+  height: 38px;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+}
+
 
 .page-header__logo-block:not(.page-header__logo-block--current) a:hover {
   opacity: 0.8;
@@ -70,58 +103,5 @@
 .page-header__logo-block:not(.page-header__logo-block--current):active {
   @media (min-width: @tablet-width) {
     opacity: 0.6;
-  }
-}
-
-.page-header__main-navigation {
-  position: relative;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    width: 440px;
-    padding-top: 42px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 478px;
-    z-index: 20;
-    padding-top: 69px;
-  }
-}
-
-.page-header__logo-link-image {
-  margin-right: 54px;
-
-  @media (min-width: @tablet-width) {
-    margin-right: 12px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-right: 14px;
-  }
-}
-
-.page-header__logo-link-image img {
-  width: 34px;
-  height: 38px;
-
-  @media (min-width: @tablet-width) {
-    width: 61px;
-    height: 50px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 70px;
-    height: 59px;
-  }
-}
-
-.page-header__logo-link-text img {
-  width: 101px;
-  height: 18px;
-
-  @media (min-width: @desktop-width) {
-    width: 118px;
-    height: 21px;
   }
 }

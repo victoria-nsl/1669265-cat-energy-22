@@ -53,7 +53,20 @@
 
 .living-example__wrapper-content {
   @media (min-width: @desktop-width) {
-    height: 462px;
+    position: relative;
+    min-height: 462px;
+    background-color: @grey-basic;
+  }
+}
+
+.living-example__wrapper-content::before {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(50% - 325px);
+    min-height: 462px;
     background-color: @grey;
   }
 }
@@ -65,25 +78,5 @@
     width: 1220px;
     padding: 72px 110px 0 110px;
     margin: 0 auto;
-  }
-}
-
-.living-example__stats-block {
-  margin: 0 auto;
-  margin-bottom: 41px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 234px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: 0;
-  }
-}
-
-.living-example__slider-block {
-  @media (min-width: @tablet-width) {
-    position: relative;
-    background-color: @grey;
   }
 }
