@@ -163,78 +163,42 @@
   @media (min-width: @tablet-width) {
     position: relative;
     top: -73px;
+    align-items: flex-end;
     width: 168px;
     min-height: 200px;
     margin: 0 auto;
 
-    &--1product {
-      padding-top: 28px;
+    &--1product,
+    &--2product,
+    &--3product,
+    &--4product,
+    &--5product,
+    &--6product,
+    &--7product {
+      padding-top: 0;
     }
 
     &--2product {
-      padding-top: 0;
       margin-bottom: -6px;
     }
+  }
 
-    &--3product {
-      padding-top: 26px;
-    }
+  @media (min-width: @desktop-width) {
+    top: -80px;
+    width: 172px;
+    min-height: 196px;
 
-    &--4product {
-      padding-top: 0;
-    }
 
-    &--5product {
-      padding-top: 29px;
-    }
-
-    &--6product {
-      padding-top: 0;
-    }
-
+    &--1product,
+    &--3product,
+    &--5product,
     &--7product {
-      padding-top: 28px;
+      margin-top: 3px;
+      margin-bottom: -3px;
     }
 
-    @media (min-width: @desktop-width) {
-      top: -80px;
-      width: 172px;
-      min-height: 196px;
-
-      &--1product {
-        padding-top: 27px;
-        margin-bottom: -5px;
-      }
-
-      &--2product {
-        padding-top: 0;
-        margin-bottom: -7px;
-      }
-
-      &--3product {
-        padding-top: 25px;
-        margin-bottom: -5px;
-      }
-
-      &--4product {
-        padding-top: 0;
-        margin-bottom: -1px;
-      }
-
-      &--5product {
-        padding-top: 28px;
-        margin-bottom: -5px;
-      }
-
-      &--6product {
-        padding-top: 0;
-        margin-bottom: -1px;
-      }
-
-      &--7product {
-        padding-top: 22px;
-        margin-bottom: -1px;
-      }
+    &--2product {
+      margin-bottom: -7px;
     }
   }
 }
@@ -372,7 +336,7 @@
 
   @media (min-width: @desktop-width) {
     width: 145px;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
     line-height: 21px;
   }
 
