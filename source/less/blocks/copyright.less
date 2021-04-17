@@ -2,6 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 21px;
+  padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 163px;
+    padding: 0;
+  }
 }
 
 .copyright__text-link {
@@ -14,18 +21,18 @@
   color: @grey-special-dark;
 }
 
-.copyright__text-link:active {
-  opacity: 0.3;
-}
-
 .copyright__image-link svg {
   fill: @grey-svg;
 }
 
-.copyright__image-link:hover svg {
+.copyright:hover svg {
   fill: @green;
 }
 
-.copyright__image-link:active svg {
+.copyright:active svg {
   fill-opacity: 0.3;
+}
+
+.copyright:active .copyright__text-link {
+  opacity: 0.3;
 }
