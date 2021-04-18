@@ -1,9 +1,28 @@
+.social {
+  padding-top: 19px;
+  padding-bottom: 17px;
+  border-top: 1px solid @grey-border-3;
+  border-bottom: 1px solid  @grey-border-3;
+
+  @media (min-width: @tablet-width) {
+    width: 129px;
+    padding: 0;
+    border-top: none;
+    border-bottom: none;
+    margin-right: 131px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 387px;
+  }
+}
+
 .social__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 125px;
+  width: 130px;
   list-style: none;
   margin: 0 auto;
   margin-left: 73px;
