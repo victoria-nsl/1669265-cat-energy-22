@@ -58,6 +58,10 @@
   @media (min-width: @tablet-width) {
     margin-left: 89px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 87px;
+  }
 }
 
 .form__input {
@@ -150,7 +154,7 @@
 /* Текстовые поля ввода */
 
 .form__input-text {
-  padding: 13px 14px 14px 14px;
+  padding: 13px 14px 14px 15px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -200,11 +204,14 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 15px;
+  right: 14px;
 }
 
 .form__input-text-icon-email {
+  width: 19px;
+  height: 14px;
   stroke: @special_dark-grey-2;
+  fill: none;
 }
 
 .form__input-text--email:focus + .form__input-text-icon-email {
@@ -216,6 +223,8 @@
 }
 
 .form__input-text-icon-tel {
+  width: 20px;
+  height: 21px;
   fill: @black-basic;
 }
 
@@ -237,7 +246,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 84px;
+    margin-bottom: 82px;
   }
 }
 
@@ -250,7 +259,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 0;
     margin-right: 81px;
   }
 }
@@ -259,7 +267,7 @@
 
 .form__notice {
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 31px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -270,6 +278,7 @@
   @media (min-width: @tablet-width) {
     width: 180px;
     margin: 0;
+    margin-bottom: 0;
     font-size: 16px;
     line-height: 16px;
   }
