@@ -1,6 +1,7 @@
-.functional-food__wrapper {
+.functional-food {
   position: relative;
-  min-height: 480px;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
@@ -9,14 +10,19 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 694px;
+    min-height: 567px;
     margin-bottom: 82px;
   }
 }
 
-.functional-food__text-block {
-  position: relative;
-  min-height: 302px;
+.functional-food::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 302px;
   background-image: url("../img/index-cat-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -27,14 +33,15 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 181px;
+    display: none;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 694px;
-    margin: 0 auto;
-    margin-left: 720px;
-    margin-top: -127px;
+    top: -127px;
+    transform: translateX(0);
+    display: block;
+    width: 720px;
+    height: 694px;
     background-image: url("../img/index-cat-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -44,59 +51,58 @@
   }
 }
 
-.functional-food__text-block::before {
+.functional-food::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
   width: 100%;
-  min-height: 302px;
+  height: 302px;
   background-color: fade(@green, 85%);
 
   @media (min-width: @tablet-width) {
-    background-color: @white-basic;
+    display: none;
   }
 
   @media (min-width: @desktop-width) {
+    display: block;
+    top: -127px;
     left: 50%;
     height: 694px;
-    margin: 0 auto;
-    margin-left: -360px;
-    background-color: fade(@green, 85%);
   }
 }
 
 .functional-food__wrapper-text {
   position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-top: 27px;
+  z-index: 2;
   width: 280px;
+  padding: 0 20px;
+  padding-top: 27px;
+  margin: 0 auto;
+  margin-bottom: 29px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
-    min-height: 181px;
-    margin-left: 0;
-    padding-left: 87px;
-    padding-top: 46px;
+    width: 768px;
+    padding: 47px 237px 0 117px;
+    margin-bottom: 20px;
     box-sizing: border-box;
     text-align: start;
   }
 
   @media (min-width: @desktop-width) {
-    top: 177px;
     width: 414px;
-    margin-left: -682px;
-    padding-left: 0;
-    text-align: start;
+    padding: 0;
+    padding-top: 96px;
+    margin: 0;
+    margin-left: calc(50% - 530px);
+    margin-bottom: 52px;
   }
 }
 
 .functional-food__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
@@ -132,45 +138,52 @@
 
 .functional-food__picture {
   position: relative;
+  z-index: 2;
   display: block;
+  order: 1;
   width: 280px;
   height: 270px;
   margin: 0 auto;
-  margin-top: -135px;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
+    order: 2;
     width: 708px;
     height: 609px;
-    margin-top: 20px;
     margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 120px;
-    left: 50%;
+    top: 12px;
+    left: calc(50% - 162px);
     width: 552px;
     height: 499px;
-    margin-left: -163px;
+    margin: 0;
   }
 }
 
 .functional-food__button {
+  position: relative;
+  z-index: 2;
   display: block;
+  order: 2;
   width: 280px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    position: absolute;
-    top: 277px;
-    left: 50%;
+    z-index: 3;
+    order: 1;
     width: 244px;
-    margin-left: -272px;
+    margin: 0;
+    margin-top: -580px;
+    margin-bottom: 526px;
+    margin-left: calc(50% - 272px);
   }
 
   @media (min-width: @desktop-width) {
-    top: 455px;
-    margin-left: -530px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: calc(50% - 530px);
   }
 }
