@@ -1,6 +1,23 @@
+.order-all {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .order-all__wrapper {
   margin-bottom: 35px;
-  padding: 186px 61px 43px 58px;
+  padding: 188px 61px 41px 58px;
   background-color: fade(@green, 85%);
   background-image: url("../img/gift-photo-mobile.jpg");
   background-repeat: no-repeat;
@@ -58,7 +75,7 @@
 .order-all__text::before {
   content: "";
   position: absolute;
-  top: -127px;
+  top: -129px;
   left: 50%;
   transform: translateX(-50%);
   width: 70px;
