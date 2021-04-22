@@ -166,11 +166,11 @@ const build = gulp.series(
   sprite,
   createWebp
   ),
- );
+);
 
- exports.build = build;
+exports.build = build;
 
- //Default
+//Default
 
 exports.default = gulp.series(
   clean,
@@ -186,4 +186,4 @@ exports.default = gulp.series(
   gulp.series(
     server,
     watcher
- ));
+));
