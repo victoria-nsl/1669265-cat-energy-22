@@ -6,7 +6,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 71px;
+    margin-bottom: 61px;
   }
 }
 
@@ -14,15 +14,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
-  @media (min-width: @tablet-width) {
-    display: grid;
-  }
+  display: grid;
+  grid-column: 1/-1;
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
   }
 }
 
@@ -33,15 +30,13 @@
   background-color: @grey-basic;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
     padding: 77px 279px 57px 52px;
     margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 570px;
     padding: 77px 51px 59px 52px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 }
 

@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicon/180.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body class="page-body">
@@ -108,7 +108,7 @@
 
         <fieldset class="owner-information">
           <legend class = "owner-information__title form__legend container container--form">
-            <span>Контактные данные (владельца кота)</span>
+            Контактные данные (владельца кота)
           </legend>
           <ul class="owner-information__list container container--form">
             <li class="owner-information__item">
@@ -134,7 +134,7 @@
 
         <fieldset class="comments">
           <legend class = "comments__title form__legend container container--form ">
-            <span> Комментарий </span>
+            Комментарий
           </legend>
           <p class="comments__item  container container--form">
             <label class="visually-hidden" for="comments-text">Текст комментария</label>
@@ -144,7 +144,7 @@
 
         <fieldset class="products-additional">
           <legend class = "products-additional__title form__legend container container--form ">
-            <span>Дополнительно</span>
+            Дополнительно
           </legend>
           <ul class="products-additional__list  container container--form">
             <li class="products-additional__item">
@@ -248,22 +248,6 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      const navMain = document.querySelector('.main-navigation');
-      const navToggle = document.querySelector('.main-navigation__toggle');
-
-      navMain.classList.remove('main-navigation--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-navigation--closed')) {
-          navMain.classList.remove('main-navigation--closed');
-          navMain.classList.add('main-navigation--opened');
-        } else {
-          navMain.classList.add('main-navigation--closed');
-          navMain.classList.remove('main-navigation--opened');
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
