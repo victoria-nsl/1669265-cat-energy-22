@@ -64,10 +64,6 @@
   }
 }
 
-.form__input {
-  display: none;
-}
-
 .form__input--checkbox + .form__label--checkbox::before {
   content: "";
   position: absolute;
@@ -144,12 +140,16 @@
   border-color: @grey-border-4;
 }
 
+.form__input--checkbox:focus + .form__label--checkbox::before,
+.form__input--radio:focus + .form__label--radio::before {
+  outline: 2px solid @black-basic;
+}
+
 
 .form__input--checkbox:disabled + .form__label--checkbox,
 .form__input--radio:disabled + .form__label--radio {
   opacity: 0.3;
 }
-
 
 /* Текстовые поля ввода */
 
@@ -250,7 +250,7 @@
   }
 }
 
-.form__button {
+.form__button-wrapper {
   margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {

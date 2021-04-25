@@ -1,4 +1,4 @@
-.programs__wrapper {
+.programs {
   margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
@@ -24,6 +24,7 @@
 }
 
 .programs__item {
+  position: relative;
   padding: 30px 33px 18px 20px;
   margin-bottom: 20px;
   box-sizing: border-box;
@@ -42,6 +43,10 @@
 
 .programs__item:last-child {
   margin-bottom: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .programs__item--fat {
@@ -55,8 +60,84 @@
 }
 
 
+.programs__item::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  width: 50px;
+  height: 50px;
+  background-color: @green;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 92px;
+    left: 446px;
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 47px;
+    left: 52px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.programs__item--slim::after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 29px;
+  width: 36px;
+  height: 50px;
+  background-image: url("../img/cat-program-slim.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 81px;
+    left: 476px;
+    width: 140px;
+    height: 192px;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 41px;
+    left: 67px;
+    width: 70px;
+    height: 97px;
+  }
+}
+
+.programs__item--fat::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 13px;
+  width: 67px;
+  height: 28px;
+  background-image: url("../img/cat-program-fat.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 135px;
+    left: 412px;
+    width: 268px;
+    height: 112px;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 67px;
+    left: 33px;
+    width: 134px;
+    height: 56px;
+  }
+}
+
 .programs__title {
-  position: relative;
   margin: 0;
   margin-bottom: 29px;
   padding-left: 71px;
@@ -76,84 +157,6 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 73px;
     padding-left: 162px;
-  }
-}
-
-.programs__title::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 2px;
-  width: 50px;
-  height: 50px;
-  background-color: @green;
-  border-radius: 50%;
-
-  @media (min-width: @tablet-width) {
-    transform: translateY(0);
-    left: 394px;
-    width: 200px;
-    height: 200px;
-  }
-
-  @media (min-width: @desktop-width) {
-    transform: translateY(-50%);
-    left: 0;
-    width: 100px;
-    height: 100px;
-  }
-}
-
-.programs__item--slim .programs__title::after {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 8px;
-  width: 36px;
-  height: 50px;
-  background-image: url("../img/cat-program-slim.svg");
-  background-repeat: no-repeat;
-
-  @media (min-width: @tablet-width) {
-    top: 3px;
-    left: 422px;
-    width: 140px;
-    height: 192px;
-    background-size: cover;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: -36px;
-    left: 15px;
-    width: 70px;
-    height: 97px;
-  }
-}
-
-.programs__item--fat .programs__title::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: -8px;
-  width: 67px;
-  height: 28px;
-  background-image: url("../img/cat-program-fat.svg");
-  background-repeat: no-repeat;
-
-  @media (min-width: @tablet-width) {
-    top: 60px;
-    left: 360px;
-    width: 268px;
-    height: 112px;
-    background-size: cover;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: -10px;
-    left: -17px;
-    width: 134px;
-    height: 56px;
   }
 }
 

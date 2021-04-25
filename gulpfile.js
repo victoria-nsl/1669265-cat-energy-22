@@ -47,7 +47,7 @@ exports.html = html;
 //Scripts
 
 const scripts = () => {
-  return gulp.src ("source/js/script.js")
+  return gulp.src ("source/js/scripts.js")
     .pipe(terser())
     .pipe(rename("scripts.min.js"))
     .pipe(gulp.dest("build/js"))
@@ -80,7 +80,7 @@ exports.images = copyImages;
 //WebP
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("source/img/*.{jpg,png}")
     .pipe(webp({quality:90}))
     .pipe(gulp.dest("build/img"))
 }
@@ -150,7 +150,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, sync.reload));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 //Build
