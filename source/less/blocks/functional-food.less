@@ -33,14 +33,17 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 100%;
     display: none;
   }
 
   @media (min-width: @desktop-width) {
     top: -127px;
+    left: auto;
+    right: 0;
     transform: translateX(0);
     display: block;
-    width: 50vw;
+    width: 49.5vw;
     height: 694px;
     background-image: url("../img/index-cat-desktop.jpg");
     background-size: 50vw auto;
@@ -68,8 +71,11 @@
   @media (min-width: @desktop-width) {
     display: block;
     top: -127px;
-    left: 50%;
+    right: 0;
+    left: auto;
+    width: 49.5vw;
     height: 694px;
+    background-size: 50vw auto;
   }
 }
 
