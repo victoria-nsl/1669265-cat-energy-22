@@ -186,7 +186,7 @@
   }
 }
 
-.form__input-text:invalid {
+.form__input-text:not(.form__input-text--optional):invalid {
   border: 2px solid @red-error;
 }
 
@@ -251,7 +251,7 @@
 }
 
 .form__button-wrapper {
-  margin-bottom: 21px;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -267,7 +267,7 @@
 
 .form__notice {
   margin: 0 auto;
-  margin-bottom: 31px;
+  margin-bottom: 32px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;

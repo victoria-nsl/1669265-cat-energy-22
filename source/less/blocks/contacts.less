@@ -25,6 +25,7 @@
     top: 95px;
     left: 50%;
     width: 570px;
+    z-index: 3;
     margin-left: -611px;
     padding: 64px 0 58px 0;
     background-color: @white-basic;
@@ -102,5 +103,27 @@
 
   @media (min-width: @tablet-width) {
     height: 400px;
+  }
+}
+
+.contacts__map-block img {
+  position: absolute;
+  top: 114px;
+  left: calc(50% - 160px);
+  width: 320px;
+  height: 362px;
+
+
+  @media (min-width: @tablet-width) {
+    top: 200px;
+    left: calc(50% - 384px);
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    left: calc(50% - 720px);
+    width: 1440px;
   }
 }
