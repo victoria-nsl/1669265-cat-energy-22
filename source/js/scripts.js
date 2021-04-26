@@ -21,13 +21,20 @@ const textTitle = document.querySelector(".functional-food__title").textContent;
 const textSlogan = document.querySelector(".functional-food__slogan").textContent;
 
 function trimString(str, count) {
-  return str.length > count ? str.slice(0, count) + '...' : str;
+  if (window.innerWidth <= 767) {
+    return str.length > count ? str.slice(0, count) + '...' : str;
+  } else {
+    return str;
+  }
 }
 
-if(window.innerWidth <= 767) {
-document.querySelector('.functional-food__title').textContent = trimString(textTitle, 75);
-} else {
-document.querySelector('.functional-food__title').textContent =textTitle;
-}
 
-document.querySelector('.functional-food__slogan').textContent = trimString(textSlogan, 135);
+window.addEventListener("load", () => {
+  document.querySelector(".functional-food__title").textContent = trimString(textTitle, 75);
+  document.querySelector(".functional-food__slogan").textContent = trimString(textSlogan, 135);
+});
+
+window.addEventListener("resize", () => {
+  document.querySelector(".functional-food__title").textContent = trimString(textTitle, 75);
+  document.querySelector(".functional-food__slogan").textContent = trimString(textSlogan, 135);
+});
