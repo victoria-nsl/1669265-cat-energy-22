@@ -1,9 +1,6 @@
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-top: 21px;
-  padding-bottom: 17px;
+  padding-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     width: 163px;
@@ -11,30 +8,40 @@
   }
 }
 
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .copyright__text-link {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: @grey-special-dark;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
-.copyright__image-link svg {
+.copyright__image-link {
   width: 27px;
   height: 34px;
   fill: @grey-svg;
 }
 
-.copyright:hover svg {
+.copyright__link:hover .copyright__image-link {
   fill: @green;
 }
 
-.copyright:active svg {
+.copyright__link:active .copyright__image-link {
   fill-opacity: 0.3;
 }
 
-.copyright:active .copyright__text-link {
+.copyright__link:active .copyright__text-link {
   opacity: 0.3;
 }
