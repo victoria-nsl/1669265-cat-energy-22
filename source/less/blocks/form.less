@@ -64,10 +64,6 @@
   }
 }
 
-.form__input {
-  display: none;
-}
-
 .form__input--checkbox + .form__label--checkbox::before {
   content: "";
   position: absolute;
@@ -144,12 +140,16 @@
   border-color: @grey-border-4;
 }
 
+.form__input--checkbox:focus + .form__label--checkbox::before,
+.form__input--radio:focus + .form__label--radio::before {
+  outline: 2px solid @black-basic;
+}
+
 
 .form__input--checkbox:disabled + .form__label--checkbox,
 .form__input--radio:disabled + .form__label--radio {
   opacity: 0.3;
 }
-
 
 /* Текстовые поля ввода */
 
@@ -166,9 +166,13 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding: 10px 19px 11px 19px;
+    padding: 10px 20px 11px 20px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 18px 11px 18px;
   }
 }
 
@@ -186,7 +190,7 @@
   }
 }
 
-.form__input-text:invalid {
+.form__input-text:not(.form__input-text--optional):invalid {
   border: 2px solid @red-error;
 }
 
@@ -205,6 +209,14 @@
   top: 50%;
   transform: translateY(-50%);
   right: 14px;
+
+  @media (min-width: @tablet-width) {
+    right: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 19px;
+  }
 }
 
 .form__input-text-icon-email {
@@ -250,8 +262,8 @@
   }
 }
 
-.form__button {
-  margin-bottom: 21px;
+.form__button-wrapper {
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -267,7 +279,7 @@
 
 .form__notice {
   margin: 0 auto;
-  margin-bottom: 31px;
+  margin-bottom: 32px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;

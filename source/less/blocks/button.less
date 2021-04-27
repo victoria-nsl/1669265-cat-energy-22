@@ -1,9 +1,6 @@
 .button {
   display: inline-block;
   vertical-align: middle;
-  width: 280px;
-  padding: 10px 20px;
-  box-sizing: border-box;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -12,6 +9,44 @@
   color: @white-basic;
   background-color: @green;
   border: none;
+}
+
+.button--program {
+  width: 280px;
+  padding: 11px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    padding: 17px 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.button--form {
+  width: 280px;
+  padding: 9px 44px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    padding: 16px 45px;
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+  }
+}
+
+.button--catalog {
+  width: 280px;
+  padding: 10px 20px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 248px;
@@ -20,49 +55,35 @@
   @media (min-width: @desktop-width) {
     width: 168px;
   }
+}
 
-  &--program {
-    padding: 11px 20px;
-    font-size: 14px;
-    line-height: 18px;
+.button--show-all {
+  width: 280px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: @grey-special-dark;
+  background-color: @grey-basic;
 
-    @media (min-width: @tablet-width) {
-      width: 244px;
-      padding: 17px 26px;
-      font-size: 20px;
-      line-height: 20px;
-    }
+  @media (min-width: @tablet-width) {
+    width: 248px;
   }
 
-  &--form {
-    cursor: pointer;
+  @media (min-width: @desktop-width) {
+    width: 168px;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      width: 282px;
-      min-height: 52px;
-      padding: 13px 45px;
-      font-size: 20px;
-      line-height: 0px;
-    }
+.button--additional-products {
+  width: 280px;
+  padding: 10px 20px;
+  box-sizing: border-box;
 
-    @media (min-width: @desktop-width) {
-      width: 568px;
-    }
+  @media (min-width: @tablet-width) {
+    width: 632px;
   }
 
-  &--additional-products {
-    @media (min-width: @tablet-width) {
-      width: 632px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 245px;
-    }
-  }
-
-  &--show-all {
-    color: @grey-special-dark;
-    background-color: @grey-basic;
+  @media (min-width: @desktop-width) {
+    width: 245px;
   }
 }
 
