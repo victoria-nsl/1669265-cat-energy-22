@@ -31,6 +31,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @grey-special-dark;
+  white-space: nowrap;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -154,7 +155,7 @@
 /* Текстовые поля ввода */
 
 .form__input-text {
-  padding: 13px 14px 14px 15px;
+  padding: 14px 14px 14px 15px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -164,11 +165,13 @@
   color: @grey-special-dark;
   border: 1px solid @grey-textarea;
   box-sizing: border-box;
+  height: 45px;
 
   @media (min-width: @tablet-width) {
     padding: 10px 20px 11px 20px;
     font-size: 20px;
     line-height: 30px;
+    height: 52px;
   }
 
   @media (min-width: @desktop-width) {
@@ -196,6 +199,7 @@
 
 .form__input-text::placeholder {
   color: @grey-special-dark;
+  opacity: 1;
 }
 
 /*Текстовые поля ввода - Контактные данные владельца */
