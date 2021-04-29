@@ -17,6 +17,7 @@ navToggle.addEventListener("click", function() {
 
 //Обрезание текста
 
+if (document.querySelector(".functional-food")) {
 const textTitle = document.querySelector(".functional-food__title").textContent;
 const textSlogan = document.querySelector(".functional-food__slogan").textContent;
 
@@ -38,3 +39,4 @@ window.addEventListener("resize", () => {
   document.querySelector(".functional-food__title").textContent = trimString(textTitle, 75);
   document.querySelector(".functional-food__slogan").textContent = trimString(textSlogan, 135);
 });
+}
